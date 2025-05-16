@@ -21,13 +21,13 @@
 
         <div style="margin-top: 10px;">
           <input id="msg" placeholder="Digite sua mensagem..." />
-          <button onclick="sendMessage()">Enviar</button>
+          <button onclick="sendMessage()">Enviar mensagem</button>
         </div>
       </div>
     </div>
 
     <script>
-      let ws;
+      const ws = new WebSocket((location.protocol === "https:" ? "wss://" : "ws://") + location.host);
       let user = "Anônimo";
 
       function enterChat() {
@@ -37,7 +37,6 @@
         document.getElementById("loginArea").style.display = "none";
         document.getElementById("msgArea").style.display = "block";
 
-        ws = new WebSocket("ws://localhost:8080");
         const chat = document.getElementById("chat");
 
         ws.onmessage = function (event) {
