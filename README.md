@@ -52,6 +52,12 @@ node server.js
 
 4. Abra o arquivo `index.html` no seu navegador (clique duas vezes ou use Live Server no VS Code).
 
+5. Basta agora testar, com o `index.html` aberto em diferentes paginas, entre no chat com diferentes nomes e use.
+
+### 📸 Prévia do Projeto
+
+![Preview do Chat](images/chat-preview.png)
+![Preview do Chat Funcionando](images/chat-preview2.png)
 ---
 
 ### 📂 Estrutura do Projeto
