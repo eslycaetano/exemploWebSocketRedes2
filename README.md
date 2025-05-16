@@ -30,8 +30,8 @@ Este projeto é um exemplo simples e funcional de um **chat em tempo real** usan
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/eslycaetano/exemploWebSocketRedes2.git
+cd exemploWebSocketRedes2
 ```
 
 
