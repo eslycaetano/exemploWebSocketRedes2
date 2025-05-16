@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat WebSocket</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Chat em Tempo Real</h2>
+
+      <!-- Área de login -->
+      <div id="loginArea">
+        <input id="username" placeholder="Seu nome..." />
+        <button onclick="enterChat()">Entrar no chat</button>
+      </div>
+
+      <!-- Área de chat (escondida inicialmente) -->
+      <div id="msgArea">
+        <ul id="chat"></ul>
+
+        <div style="margin-top: 10px;">
+          <input id="msg" placeholder="Digite sua mensagem..." />
+          <button onclick="sendMessage()">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let ws;
+      let user = "Anônimo";
+
+      function enterChat() {
+        const nameInput = document.getElementById("username").value.trim();
+        user = nameInput || "Anônimo";
+
+        document.getElementById("loginArea").style.display = "none";
+        document.getElementById("msgArea").style.display = "block";
+
+        ws = new WebSocket("ws://localhost:8080");
+        const chat = document.getElementById("chat");
+
+        ws.onmessage = function (event) {
+          const li = document.createElement("li");
+          li.textContent = event.data;
+
+          if (event.data.startsWith(`[${user}]`)) {
+            li.classList.add("self");
+          }
+
+          chat.appendChild(li);
+          chat.scrollTop = chat.scrollHeight;
+        };
+
+        ws.onopen = () => console.log("Conectado ao servidor WebSocket.");
+        ws.onerror = () => alert("Erro ao conectar ao servidor WebSocket.");
+      }
+
+      function sendMessage() {
+        const input = document.getElementById("msg");
+
+        const data = {
+          user: user,
+          text: input.value,
+        };
+
+        ws.send(JSON.stringify(data));
+        input.value = '';
+      }
+    </script>
+  </body>
+</html>

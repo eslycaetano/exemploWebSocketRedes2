@@ -1,0 +1,89 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* Inputs */
+input {
+  width: calc(100% - 12px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Botões */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/* Lista de mensagens */
+#chat {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 15px;
+}
+
+#chat li {
+  background: #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  max-width: 85%;
+}
+
+/* Mensagem do próprio usuário */
+#chat li.self {
+  background: #dbeafe;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Áreas controladas pelo JS */
+#msgArea {
+  display: none;
+}

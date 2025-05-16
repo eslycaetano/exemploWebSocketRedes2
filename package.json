@@ -1,0 +1,23 @@
+{
+  "name": "exemplowebsocketredes2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eslycaetano/exemploWebSocketRedes2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eslycaetano/exemploWebSocketRedes2/issues"
+  },
+  "homepage": "https://github.com/eslycaetano/exemploWebSocketRedes2#readme",
+  "dependencies": {
+    "ws": "^8.18.2"
+  }
+}
