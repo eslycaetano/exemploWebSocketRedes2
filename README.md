@@ -1,8 +1,12 @@
+Atualize agora esse read.me, pois agora tem o deploy em uma branch e a branch main está apenas local 
+
 # Exemplo de WebSocket Redes II
 ## 📡 Chat em Tempo Real com WebSocket
 
 Este projeto é um exemplo simples e funcional de um **chat em tempo real** usando **WebSocket com Node.js** e interface web em HTML/CSS puro.
 
+### Ele tem um deploy simples e utilizavel
+- [https://exemplowebsocketredes2.onrender.com](https://exemplowebsocketredes2.onrender.com)
 ---
 
 ### 📌 Funcionalidades
@@ -25,7 +29,7 @@ Este projeto é um exemplo simples e funcional de um **chat em tempo real** usan
 
 ---
 
-### 🚀 Como Executar o Projeto
+### 🚀 Como Executar o Projeto para testar localmente:
 
 1. Clone o repositório:
 
@@ -33,7 +37,6 @@ Este projeto é um exemplo simples e funcional de um **chat em tempo real** usan
 git clone https://github.com/eslycaetano/exemploWebSocketRedes2.git
 cd exemploWebSocketRedes2
 ```
-
 
 2. Instale as dependências:
 
@@ -44,15 +47,12 @@ npm install
 3. Inicie o servidor WebSocket:
 
 ```bash
-cd src
-node server.js
+npm start
 ```
 
-> O servidor será iniciado em `ws://localhost:8080`.
+> O servidor será iniciado em `ws://localhost:8080` e está acessivel em `http://localhost:8080`
 
-4. Abra o arquivo `index.html` no seu navegador (clique duas vezes ou use Live Server no VS Code).
-
-5. Basta agora testar, com o `index.html` aberto em diferentes paginas, entre no chat com diferentes nomes e use.
+5. Basta agora testar, com o navegador aberto em diferentes paginas ou em diferentes navegadores, entre no chat com diferentes nomes e use.
 
 ### 📸 Prévia do Projeto
 
@@ -84,5 +84,4 @@ node server.js
 Sinta-se à vontade para abrir issues ou enviar PRs com melhorias, correções ou sugestões. 🤝
 
 ---
-
 
