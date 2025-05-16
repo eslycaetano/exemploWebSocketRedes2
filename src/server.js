@@ -51,5 +51,5 @@ wss.on("connection", (ws) => {
 
 const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}, acessível em http://localhost:${PORT}`);
 });
