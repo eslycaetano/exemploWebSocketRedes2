@@ -1,11 +1,10 @@
-/* Reset e base */
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f3f4f6;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
   margin: 0;
   padding: 0;
   display: flex;
@@ -18,17 +17,18 @@ body {
 .container {
   width: 100%;
   max-width: 500px;
-  background: white;
+  background: #fef6ff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 /* Título */
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #111827;
+  color: #5b21b6;
 }
 
 /* Inputs */
@@ -36,16 +36,17 @@ input {
   width: calc(100% - 12px);
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #d8b4fe;
   border-radius: 8px;
   font-size: 16px;
+  background: #faf5ff;
 }
 
 /* Botões */
 button {
   width: 100%;
   padding: 10px;
-  background-color: #2563eb;
+  background-color: #9333ea;
   color: white;
   font-weight: bold;
   border: none;
@@ -55,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #1e40af;
+  background-color: #7e22ce;
 }
 
 /* Lista de mensagens */
@@ -68,7 +69,7 @@ button:hover {
 }
 
 #chat li {
-  background: #e5e7eb;
+  background: #ede9fe;
   padding: 8px 12px;
   border-radius: 16px;
   margin-bottom: 10px;
@@ -76,9 +77,8 @@ button:hover {
   max-width: 85%;
 }
 
-/* Mensagem do próprio usuário */
 #chat li.self {
-  background: #dbeafe;
+  background: #c4b5fd;
   margin-left: auto;
   text-align: right;
 }
@@ -86,4 +86,33 @@ button:hover {
 /* Áreas controladas pelo JS */
 #msgArea {
   display: none;
+}
+
+/* 🐆 Easter egg: manchas da onça */
+.spot {
+  position: fixed;
+  background: url('/images/spot.png') no-repeat center center / contain;
+  animation: fadeInOut 4s ease-in-out forwards;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
 }
