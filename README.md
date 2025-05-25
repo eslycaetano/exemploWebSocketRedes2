@@ -78,7 +78,10 @@ node server.js
 - [MDN WebSocket API](https://developer.mozilla.org/pt-BR/docs/Web/API/WebSocket)
 
 ---
+ 
+**Easter-egg:** Oncinhas
 
+---
 ### 📬 Contribuindo
 
 Sinta-se à vontade para abrir issues ou enviar PRs com melhorias, correções ou sugestões. 🤝
