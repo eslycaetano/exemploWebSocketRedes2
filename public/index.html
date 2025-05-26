@@ -33,16 +33,7 @@
       );
       let user = "Anônimo";
 
-      function enterChat() {
-        const nameInput = document.getElementById("username").value.trim();
-        user = nameInput || "Anônimo";
-
-        document.getElementById("loginArea").style.display = "none";
-        document.getElementById("msgArea").style.display = "block";
-
-        const chat = document.getElementById("chat");
-
-        ws.onmessage = function (event) {
+      ws.onmessage = function (event) {
           const li = document.createElement("li");
           li.textContent = event.data;
 
@@ -53,6 +44,15 @@
           chat.appendChild(li);
           chat.scrollTop = chat.scrollHeight;
         };
+
+      function enterChat() {
+        const nameInput = document.getElementById("username").value.trim();
+        user = nameInput || "Anônimo";
+
+        document.getElementById("loginArea").style.display = "none";
+        document.getElementById("msgArea").style.display = "block";
+
+        const chat = document.getElementById("chat");
 
         ws.onopen = () => console.log("Conectado ao servidor WebSocket.");
         ws.onerror = () => alert("Erro ao conectar ao servidor WebSocket.");
